@@ -17,7 +17,53 @@
       <button id="enterApp">Enter Formify</button>
     </div>
   </div>
+<!-- Main App -->
+  <div id="app" class="hidden">
+    <header>
+      <div class="logo">
+        <div class="logo-icon">📝</div>
+        <span class="logo-text">Form<span>ify</span></span>
+      </div>
+      <div class="actions">
+        <button id="btnLoad">Load Schema</button>
+        <button id="btnSave">Save Schema</button>
+        <button id="btnExport">Export JSON</button>
+      </div>
+    </header>
 
+    <main>
+      <section class="builder">
+        <aside class="palette">
+          <h3>Palette</h3>
+          <button data-type="text">Text</button>
+          <button data-type="email">Email</button>
+          <button data-type="number">Number</button>
+          <button data-type="select">Select</button>
+          <button data-type="checkbox">Checkbox</button>
+          <button data-type="textarea">Textarea</button>
+        </aside>
+
+        <section class="canvas">
+          <h3>Canvas</h3>
+          <ul id="fieldList"></ul>
+        </section>
+
+        <aside class="props">
+          <h3>Properties</h3>
+          <form id="propForm"></form>
+        </aside>
+      </section>
+
+      <section class="preview">
+        <h3>Live Preview</h3>
+        <form id="liveForm"></form>
+        <button id="btnSubmit">Submit</button>
+        <pre id="output"></pre>
+      </section>
+    </main>
+  </div>
+
+  <script src="mvp.js"></script>
   
 </body>
 </html>
