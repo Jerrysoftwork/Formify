@@ -1,0 +1,9 @@
+* { box-sizing: border-box; font-family: system-ui, Arial; }
+body { margin: 0; background: #0b1220; color: #e8eefc; }
+
+/* Header */
+header { 
+  display:flex; justify-content:space-between; align-items:center; 
+  padding:12px 16px; border-bottom:1px solid #1f2a44; 
+}
+
