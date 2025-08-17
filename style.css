@@ -7,3 +7,37 @@ header {
   padding:12px 16px; border-bottom:1px solid #1f2a44; 
 }
 
+/* Buttons */
+button { 
+  padding:8px 12px; border:0; border-radius:10px; 
+  background:#2b5fd6; color:white; cursor:pointer; 
+}
+button + button { margin-left:8px; }
+
+main { padding:16px; display:grid; gap:16px; }
+.builder { display:grid; grid-template-columns: 180px 1fr 260px; gap:16px; }
+.palette, .canvas, .props, .preview { 
+  background:#0f1a33; border:1px solid #1f2a44; 
+  border-radius:14px; padding:12px; 
+}
+#fieldList { list-style:none; padding:0; margin:0; display:grid; gap:8px; }
+.fieldItem { 
+  display:flex; justify-content:space-between; align-items:center; 
+  padding:8px; background:#101f40; 
+  border:1px dashed #2a3e74; border-radius:10px; cursor:pointer; 
+}
+.fieldItem.active { outline:2px solid #2b5fd6; }
+input, select, textarea { 
+  width:100%; padding:8px; border-radius:8px; 
+  border:1px solid #2a3e74; background:#0b162e; color:#e8eefc; 
+}
+form#propForm > div { margin-bottom:10px; }
+.preview form > div { margin-bottom:10px; }
+
+/* Branding */
+.logo {
+  display: flex; align-items: center;
+  font-size: 1.4rem; font-weight: 700; color: #2B5FD6;
+}
+.logo-icon { margin-right: 8px; font-size: 1.5rem; }
+.logo-text span { color: #E8EEFC; }
