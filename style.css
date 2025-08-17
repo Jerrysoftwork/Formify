@@ -41,3 +41,15 @@ form#propForm > div { margin-bottom:10px; }
 }
 .logo-icon { margin-right: 8px; font-size: 1.5rem; }
 .logo-text span { color: #E8EEFC; }
+
+/* Splash Screen */
+#splash {
+  position: fixed; inset: 0; background: #0b1220; 
+  display: flex; align-items: center; justify-content: center; 
+  z-index: 100; text-align: center; 
+}
+.splash-content h1 { font-size: 2rem; color: #2B5FD6; }
+.splash-content h1 span { color: #FFD369; }
+.splash-content p { margin: 10px 0 20px; color: #E8EEFC; }
+#enterApp { font-size: 1.1rem; }
+.hidden { display: none; }
