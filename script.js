@@ -22,3 +22,14 @@ const fieldList = $("#fieldList");
 const propForm = $("#propForm");
 const liveForm = $("#liveForm");
 const output = $("#output");
+
+// Palette add
+document.querySelectorAll(".palette button").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const f = fieldDefaults(btn.dataset.type);
+    if (f.type === "select") f.options = ["Option A","Option B"];
+    state.schema.fields.push(f);
+    state.activeId = f.id;
+    render();
+  });
+});
