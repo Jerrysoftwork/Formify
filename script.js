@@ -33,3 +33,23 @@ document.querySelectorAll(".palette button").forEach(btn => {
     render();
   });
 });
+
+// Save / Load / Export
+$("#btnSave").onclick = () => {
+  localStorage.setItem("formSchema", JSON.stringify(state.schema));
+  alert("Saved to localStorage");
+};
+$("#btnLoad").onclick = () => {
+  const raw = localStorage.getItem("formSchema");
+  if (!raw) return alert("No saved schema");
+  state.schema = JSON.parse(raw);
+  state.activeId = state.schema.fields[0]?.id || null;
+  render();
+};
+$("#btnExport").onclick = () => {
+  const blob = new Blob([JSON.stringify(state.schema, null, 2)], { type: "application/json" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url; a.download = "form-schema.json"; a.click();
+  URL.revokeObjectURL(url);
+};
