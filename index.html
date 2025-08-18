@@ -1,71 +1,145 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>Formify — Build Forms Faster ⚡</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <link rel="stylesheet" href="styles.css" />
-  <!-- Favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2215%22 ry=%2215%22 fill=%22%232B5FD6%22/><text x=%2250%22 y=%2258%22 font-size=%2242%22 text-anchor=%22middle%22 fill=%22white%22 font-family=%22sans-serif%22>F</text></svg>">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formify Pro ✨ — Build Beautiful Forms</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2215%22 ry=%2215%22 fill=%22%236366f1%22/><text x=%2250%22 y=%2258%22 font-size=%2242%22 text-anchor=%22middle%22 fill=%22white%22 font-family=%22sans-serif%22>✨</text></svg>">
 </head>
 <body>
-  <!-- Splash Screen -->
-  <div id="splash">
-    <div class="splash-content">
-      <h1>🚀 Welcome to <span>Formify</span></h1>
-      <p>Build Forms Faster, Smarter & Cleaner ⚡</p>
-      <button id="enterApp">Enter Formify</button>
+    <!-- Splash Screen -->
+    <div id="splash">
+        <div class="splash-content">
+            <div class="splash-logo">✨</div>
+            <h1 class="splash-title">Formify Pro</h1>
+            <p class="splash-subtitle">Build Beautiful Forms with Modern Design</p>
+            <button id="enterApp" class="enter-btn">
+                Launch Builder
+            </button>
+        </div>
     </div>
-  </div>
 
-  <!-- Main App -->
-  <div id="app" class="hidden">
-    <header>
-      <div class="logo">
-        <div class="logo-icon">📝</div>
-        <span class="logo-text">Form<span>ify</span></span>
-      </div>
-      <div class="actions">
-        <button id="btnLoad">Load Schema</button>
-        <button id="btnSave">Save Schema</button>
-        <button id="btnExport">Export JSON</button>
-      </div>
-    </header>
+    <!-- Main App -->
+    <div id="app" class="hidden">
+        <header class="header">
+            <div class="logo">
+                <div class="logo-icon">✨</div>
+                <span class="logo-text">Formify Pro</span>
+            </div>
+            <div class="header-actions">
+                <button id="btnLoad" class="btn">📂 Load</button>
+                <button id="btnSave" class="btn btn-success">💾 Save</button>
+                <button id="btnExport" class="btn btn-primary">📄 Export</button>
+            </div>
+        </header>
 
-    <main>
-      <section class="builder">
-        <aside class="palette">
-          <h3>Palette</h3>
-          <button data-type="text">Text</button>
-          <button data-type="email">Email</button>
-          <button data-type="number">Number</button>
-          <button data-type="select">Select</button>
-          <button data-type="checkbox">Checkbox</button>
-          <button data-type="textarea">Textarea</button>
-        </aside>
+        <main class="main">
+            <section class="builder">
+                <!-- Palette -->
+                <div class="panel">
+                    <div class="panel-header">
+                        <h3 class="panel-title">🎨 Field Palette</h3>
+                    </div>
+                    <div class="palette-grid">
+                        <button class="field-btn" data-type="text">
+                            <span class="field-icon">📝</span>
+                            Text Input
+                        </button>
+                        <button class="field-btn" data-type="email">
+                            <span class="field-icon">📧</span>
+                            Email
+                        </button>
+                        <button class="field-btn" data-type="number">
+                            <span class="field-icon">🔢</span>
+                            Number
+                        </button>
+                        <button class="field-btn" data-type="tel">
+                            <span class="field-icon">📞</span>
+                            Phone
+                        </button>
+                        <button class="field-btn" data-type="url">
+                            <span class="field-icon">🌐</span>
+                            URL
+                        </button>
+                        <button class="field-btn" data-type="password">
+                            <span class="field-icon">🔒</span>
+                            Password
+                        </button>
+                        <button class="field-btn" data-type="textarea">
+                            <span class="field-icon">📄</span>
+                            Textarea
+                        </button>
+                        <button class="field-btn" data-type="select">
+                            <span class="field-icon">📋</span>
+                            Select
+                        </button>
+                        <button class="field-btn" data-type="checkbox">
+                            <span class="field-icon">☑️</span>
+                            Checkbox
+                        </button>
+                        <button class="field-btn" data-type="radio">
+                            <span class="field-icon">🔘</span>
+                            Radio
+                        </button>
+                        <button class="field-btn" data-type="date">
+                            <span class="field-icon">📅</span>
+                            Date
+                        </button>
+                        <button class="field-btn" data-type="time">
+                            <span class="field-icon">⏰</span>
+                            Time
+                        </button>
+                    </div>
+                </div>
 
-        <section class="canvas">
-          <h3>Canvas</h3>
-          <ul id="fieldList"></ul>
-        </section>
+                <!-- Canvas -->
+                <div class="panel canvas">
+                    <div class="panel-header">
+                        <h3 class="panel-title">🎯 Form Canvas</h3>
+                    </div>
+                    <div id="canvasContent">
+                        <div class="canvas-empty">
+                            <div class="canvas-empty-icon">📝</div>
+                            <p>Click on field types to add them to your form</p>
+                        </div>
+                    </div>
+                    <ul id="fieldList" class="field-list hidden"></ul>
+                </div>
 
-        <aside class="props">
-          <h3>Properties</h3>
-          <form id="propForm"></form>
-        </aside>
-      </section>
+                <!-- Properties -->
+                <div class="panel">
+                    <div class="panel-header">
+                        <h3 class="panel-title">⚙️ Properties</h3>
+                    </div>
+                    <div id="propForm" class="prop-form">
+                        <p style="color: var(--text-muted); text-align: center;">Select a field to edit its properties</p>
+                    </div>
+                </div>
+            </section>
 
-      <section class="preview">
-        <h3>Live Preview</h3>
-        <form id="liveForm"></form>
-        <button id="btnSubmit" type="button">Submit</button>
-        <pre id="output"></pre>
-      </section>
-    </main>
-  </div>
+            <!-- Preview -->
+            <section class="preview">
+                <div class="panel-header">
+                    <h3 class="panel-title">👁️ Live Preview</h3>
+                </div>
+                <div class="preview-form">
+                    <h2 id="formTitle" style="margin-bottom: 0.5rem; color: var(--text-primary);">Untitled Form</h2>
+                    <p id="formDescription" style="color: var(--text-muted); margin-bottom: 2rem;">Build your form using the field palette</p>
+                    <form id="liveForm"></form>
+                    <button id="btnSubmit" class="btn btn-primary" style="margin-top: 1rem;">
+                        🚀 Submit Form
+                    </button>
+                </div>
+                <div class="output-section">
+                    <h4 style="margin-bottom: 0.5rem; color: var(--text-primary);">Form Data Output:</h4>
+                    <div id="output" class="output">Click "Submit Form" to see form data here...</div>
+                </div>
+            </section>
+        </main>
+    </div>
 
-  <!-- Scripts -->
-  <script src="mvp.js"></script>
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
